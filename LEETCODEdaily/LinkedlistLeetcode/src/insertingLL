@@ -1,0 +1,32 @@
+
+public class insertingLL {
+    private insertingLL.Node head;
+    private insertingLL.Node tail;
+
+    private int size ;
+    public  insertingLL(){
+        this.size =0;
+    }
+    public void insertFirst (int value){
+        Node node = new Node(value);
+        node.next = head;
+        head = node;
+
+        if(tail==null){
+            tail=head;
+        }
+        size+=1;
+    }
+    private class Node {
+        private int value ;
+        private insertingLL.Node next;
+
+        public Node (int value ){
+            this.value=value;
+        }
+        public Node (int value , insertingLL.Node next){
+            this.value = value;
+            this.next = next ;
+        }
+    }
+}

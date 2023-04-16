@@ -1,0 +1,42 @@
+public class DISPLAYLL {
+    public class creatingLL {
+        private Node head;
+        private Node tail;
+
+        private int size ;
+        public  creatingLL() {
+            this.size = 0;
+
+            public void Display () {
+                Node temp = head;
+                while (temp != null) {
+                    System.out.println(temp.value + " ");
+                    temp = temp.next;
+                }
+            }
+            private class Node {
+                private int value;
+                private Node next;
+
+                public Node(int value) {
+                    this.value = value;
+                }
+
+                public Node(int value, Node next) {
+                    this.value = value;
+                    this.next = next;
+                }
+            }
+        }
+
+//
+//    here we could have moved the head function only like if head != null , then print head.value and after that head = head.next
+//    But we didnt do that cuz if we want to run the program again then head is already at null , so the entire structure of the program is
+//    changed , so in order to prevent that we make a temporary Node named temp which is equal to head and taking that we do the same
+//    procedure and that will not change the structure of the function too
+//
+//
+//    s0 Note to make
+//    if you are changing anything in the function ex- adding an element or deleting an element , then only change head or tail location
+//    else take reference node and then work with it accordingly
+}

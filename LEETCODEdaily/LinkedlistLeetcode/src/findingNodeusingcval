@@ -1,0 +1,14 @@
+public class findingNodeusingcval {
+ public Node find(int value){
+        Node node = head;
+    while (node !=null){
+if (node.value== value){
+return node ;
+}
+}
+    return null;
+     }
+}
+here we will make one Node in which we will assign it int index , then we will search for the value by passing through all the node
+and then if we find that value we will simply return that node else we will return null
+as simple as that .

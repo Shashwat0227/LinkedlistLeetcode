@@ -1,0 +1,19 @@
+    public int DeleteLast(){
+         if (size <=1){
+             return DeleteFirst();
+         }
+     Node secondlast = get(size-2);
+         int val = tail.value;
+         tail= secondlast;
+         tail.next=null;
+         return val;
+     }
+     public Node get(int index){
+         Node node = head;
+         for (int i = 0; i <index ; i++) {
+             node = node.next;
+
+         }
+Here we made a class for Node which will point to the reference of the elements which are present
+cuz we cannot do tail.prev or something like this , so basically we have to put tail to the second last and them tail.next to null
+so created a class of Mode for getting size-2 (secondlast term ) and then putted it to tail and then did the process

@@ -1,0 +1,18 @@
+public class deleteanyindex {
+ public int Delete (int index ){
+         if(index==0){
+             return DeleteFirst();
+
+         }
+     if(index == size-1){
+         return DeleteLast();
+
+     }
+     Node prev = get(index -1);
+     int val = prev.next.value;
+     prev.next = prev.next.next;
+     return val;
+     }
+}
+Here we go behind the index which we want to delete so basically what we do is we go back and then the value we move the head to prev.next.next
+then by this we delete the term in btw that :)

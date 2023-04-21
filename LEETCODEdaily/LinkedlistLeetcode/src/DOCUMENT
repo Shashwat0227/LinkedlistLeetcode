@@ -1,0 +1,36 @@
+public class doublylinkedlist {
+
+    Node head;
+
+    private class Node {
+        int val;
+        Node next;
+        Node prev;
+
+
+    public Node (int val){
+        this.val = val;
+    }
+
+
+    public Node(int val, Node next, Node prev) {
+        this.next = next;
+        this.prev = prev;
+        this.val = val;
+    }
+   public void insertFirst(int val){
+        Node node = new Node (val);
+        node.next = head;
+        node.prev = null;
+        if (head!=null){
+            head.prev=node;
+        }
+   head = node;
+    }
+    }
+}
+Here we made a node class in which we defined a new node named prevv for accessing the previous data and then using constructors we
+created the values and other stuff and then we wrote the program for inserting the first element
+in this we basically make one node and insert value in that then we point node.next=head ad then node.prev = null and then if head ==null then it
+simply is the first element so if head != null then we apply head.prev = node for linking it behind head and then moving head to node
+

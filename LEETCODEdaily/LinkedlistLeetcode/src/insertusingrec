@@ -1,0 +1,22 @@
+public class insertusingrec {
+
+     public void insertRec(int val , int index){
+        head = insertRec(val , index , head);
+    }
+    private Node insertRec(int val , int index , Node node ){
+        if(index ==0 ){
+            Node temp = new Node(val,node);
+            size++;
+            return temp;
+        }
+        node.next = insertRec(val , index-1 ,node.next);
+        return node;
+    }
+}
+here we are inserting value using recursion
+so what we do is we make a function insertrec and in that we give the value and the index at which we want to insert
+now for doing that we make a Node class in whicb we give the same value and index and a node
+if index (remains ==0 ) then a temp node is created in which we provide the val and assign it to node and then increase
+size by  1 and return that ,
+if index (!=0) then we call the function again like node.next = the function and like this we move forward till the place after
+which we want to insert and then using the temp node we insert it and return it !
